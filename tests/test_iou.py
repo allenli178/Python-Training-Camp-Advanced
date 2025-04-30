@@ -1,5 +1,6 @@
 from exercises.iou import calculate_iou
 
+
 def test_cases():
     # 测试样例1：完全重叠的情况
     box1 = [0, 0, 10, 10]
@@ -21,6 +22,7 @@ def test_cases():
     result3 = calculate_iou(box5, box6)
     print(f"测试样例3 - IoU: {result3:.4f}")
     print("样例3:", "yes" if result3 == 0 else "no")
+
 
 if __name__ == "__main__":
     test_cases()

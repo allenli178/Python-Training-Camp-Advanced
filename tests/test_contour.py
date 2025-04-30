@@ -4,6 +4,7 @@ import numpy as np
 import os
 from exercises.contour_detection import contour_detection
 
+
 class TestContourDetection:
     @classmethod
     def setup_class(cls):
@@ -15,11 +16,11 @@ class TestContourDetection:
     def test_success_case(self):
         """测试正常图片处理"""
         result, contours = contour_detection(self.test_img)
-        
+
         assert result is not None, "结果图像不应为None"
         assert isinstance(contours, list), "轮廓应返回列表"
         assert len(contours) > 0, "应检测到至少一个轮廓"
-        
+
         # 验证结果图像格式
         assert isinstance(result, np.ndarray), "结果应为NumPy数组"
         assert result.ndim == 3, "结果图像应为3通道彩色图"
